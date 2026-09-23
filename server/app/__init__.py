@@ -15,5 +15,6 @@ def create_app():
     api=Api(app)
 
     api.add_resource(Plants,"/plants")
+    api.add_resource(PlantsById,"/plants/<int:id>")
 
     return app
