@@ -32,7 +32,7 @@ with app.app_context():
     )
     fiddle = Plant(
         name="Fiddle-leaf",
-        image="/images/fiddle-leaf.jpg",
+        image="/images/fiddle-leaf-fig.jpg",
         price=40.67,
     )
     monstera = Plant(
