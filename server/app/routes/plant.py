@@ -63,5 +63,18 @@ class PlantsById(Resource):
             200
         )
         return response
-    
+    def delete(self,id):
+        plant=Plant.query.filter_by(id=id).first()
+        if plant is None:
+            return {
+                "message":"OOOOpppss!!!The plant does not exist in our database"
+            },404
+        db.session.delete(plant)
+        db.session.commit()
+
+        response={
+            "deleted_successfully":True,
+            "message":"The plant has been successfully deleted"
+        }
+        return response,200
 
