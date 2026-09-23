@@ -1,6 +1,6 @@
-from .db import db
-from sqlachemy_serializer import SerializerMixin
-from sqlachemy.orm import Mapped,mapped_column 
+from app.db import db
+from sqlalchemy_serializer import SerializerMixin
+from sqlalchemy.orm import Mapped,mapped_column 
 
 class Plant(db.Model,SerializerMixin):
     __tablename__="plants"
