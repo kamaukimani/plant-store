@@ -32,22 +32,22 @@ function NewPlantForm({ onAddPlant }) {
           placeholder="Plant name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
+        /><br/>
         <input
           type="text"
           name="image"
           placeholder="Image URL"
           value={image}
           onChange={(e) => setImage(e.target.value)}
-        />
+        /><br/>
         <input
           type="number"
           name="price"
-          step="0.01"
+          step="10"
           placeholder="Price"
           value={price}
           onChange={(e) => setPrice(parseFloat(e.target.value))}
-        />
+        /><br/>
         <button type="submit">Add Plant</button>
       </form>
     </div>
