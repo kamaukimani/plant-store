@@ -20,6 +20,10 @@ function PlantPage() {
     const updatedPlantsArray = [...plants, newPlant];
     setPlants(updatedPlantsArray);
   }
+  function handleDeletePlant(id){
+    const updatedArray=plants.filter(plant=> plant.id != id)
+    setPlants(updatedArray)
+  }
 
   const displayedPlants = plants.filter((plant) => {
     return plant.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -30,7 +34,7 @@ function PlantPage() {
       <NewPlantForm onAddPlant={handleAddPlant} />
       <br/>
       <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
-      <PlantList plants={displayedPlants} />
+      <PlantList plants={displayedPlants} onDeletePlant={handleDeletePlant}/>
     </main>
   );
 }
