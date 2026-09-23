@@ -1,6 +1,7 @@
 from flask_restful import Resource 
 from flask import make_response,request 
 from app.models import Plant
+from app.db import db
 
 class Plants(Resource):
     def get(self):
@@ -10,3 +11,4 @@ class Plants(Resource):
             200
         )
         return response
+    
